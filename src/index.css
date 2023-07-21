@@ -1,0 +1,243 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/* Navbar styling */
+nav{
+  width: 800px;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(230deg,#ebfc03,#00fa8e);
+  box-shadow: 0px 0px 10px black;
+  border-radius: 5px;
+  padding:0px 5px;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo h1{
+  color:#05386b;
+  text-decoration: 2px underline  gold;
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.logo h1::first-letter{
+  font-size: 50px;
+}
+
+nav img{
+  width: 100px;
+  height: 70px;
+  transition: 0.1s;
+
+}
+nav img:hover{
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+
+.navlinks a{
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin:0px  15px;
+
+}
+/* Styling for foodlist */
+.home{
+  width: 800px;
+  height: auto;
+  margin: auto;
+  /* border:7px solid green; */
+  background: linear-gradient(#a16bfe,#5583ee,#bc3d2f);
+  border-radius: 7px;
+  box-shadow: 0px 0px 7px black;
+  
+}
+.foodList{
+  /* border: 5px solid yellow; */
+  display: grid;
+  grid-template-columns: 350px 350px;
+  column-gap: 10px;
+  row-gap: 20px;
+ 
+}
+
+.food{
+  width: 300px;
+  height: auto;
+  margin: 10px;
+  padding: 8px;
+  text-align: center;
+  background: linear-gradient(45deg,#d4fc78,#99e5a2,#116466);
+  color:#c3073f;
+  font-weight: 800;
+  font-style: oblique;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.food:hover{
+  transform: scale(1.05);
+  transition: 0.2s;
+  box-shadow: 0px 0px 10px  black;
+}
+.food img{
+  width:250px;
+  height: 220px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.food a{
+  text-decoration: none;
+}
+.food h1,h3{
+  color:#051527;
+}
+.food button{
+  padding: 3px;
+}
+.title {
+/* border: 5px solid lawngreen; */
+font-style: italic;
+text-shadow: 0px 0px 5px gray;
+color:#051527;
+text-decoration: dashed 2px underline red;
+text-align: center;
+}
+
+#Allfoodlist{
+  margin-left: 70px;
+}
+
+.loader{
+  width: 100px;
+  height: 100px;
+  margin: 50px auto;
+  border:5px solid #00fa8e;
+  border-right: 5px solid #05386b;
+  border-radius: 50%;
+  animation-name: loading;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function:linear;
+
+}
+
+@keyframes loading{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/* ADD FOOD styling  */
+
+.add-food{
+  width: 800px;
+  height: auto;
+  margin: 10px auto;
+  background: linear-gradient(230deg,#00fa8e,#ebfc03,#00fa8e);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 4px;
+
+}
+.add-food h1{
+  text-align: center;
+  font-style: italic;
+  color: #05386b;
+}
+.add-food hr{
+  border: solid rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+.newelements form{
+  width: 500px;
+  display: grid;
+  grid-template-columns: 150px 150px;
+  margin: auto;
+  row-gap: 10px;
+}
+
+.newelements label{
+  color: #05386b;
+  font-size: 22px;
+}
+
+.newelements input{
+  width: 300px;
+  height: 38px;
+  font-size: 20px;
+  border: none;
+  padding-left: 10px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.newelements-input{
+  width: 300px;
+  display:grid;
+  grid-template-columns: 20px 120px;
+}
+
+.newelements-input [type="radio"]{
+ accent-color:#00fa8e;
+ width: 20px;
+ height: 20px;
+}
+.newelements input[type="submit"]{
+  background: linear-gradient(230deg,#00fa8e,#ebfc03,#00fa8e);
+  width: 250px;
+  height: 40px;
+  margin: 10px 80px;
+  border: none ;
+  display: block;
+  box-shadow: 0px 0px 4px black;
+  font-size: 20px;
+  border-radius: 3px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  color:#05386b;
+}
+.orders{
+  width: 700px;
+  height: auto;
+  margin: 10px auto;
+}
+
+.orders h1{
+  text-align: center;
+  margin: 10px;
+}
+
+.foodDetails{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 20px;
+  width: 800px;
+  height: auto;
+  background: linear-gradient(45deg,#d4fc78,#99e5a2,#116466);
+  padding: 10px;
+  border-radius: 3%;
+  box-shadow: 3px 2px  10px black;
+  color: #05386b;
+  
+}
